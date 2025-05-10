@@ -1,0 +1,88 @@
+/* === Header Styles === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.site-header .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+  }
+
+.site-header h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    margin-top: 1.25rem;
+    margin-bottom: 0.3rem;
+}
+
+.site-header h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+    color: rgb(61, 61, 61);
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.logo img {
+    width: 135px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+}
+
+
+/* === Header Nav Styles === */
+.site-nav ul {
+  list-style: none; /* removes bullets */
+  display: flex;
+  flex-wrap: wrap; /* wraps on small screens */
+  justify-content: center;
+  gap: 2.5rem; /* spacing between links */
+  padding: 0;
+  margin: 2rem 0 3rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 500;
+  color: #1a1a1a;
+  font-size: 17px;
+  transition: color 0.3s ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: #a00000; /* deep red hover */
+}
+
+.site-nav a.active {
+  color: #a00000; /* active link style */
+  font-weight: 600;
+}
+
+.nav-icon {
+  stroke: currentColor;
+  margin-top: .17rem;
+  width: 17px;
+  height: 17px;
+}
+
+
+
+
+
+  
+
+  
+
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Filing for Disability | Southeastern Disability</title>
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/faq.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <div id="header-placeholder" style="display: none;"></div>
+
+  <!-- FAQ Content -->
+  <main class="faq-wrapper">
+    <div class="container">
+      <h1>Disability Benefits Frequently Asked Questions</h1>
+      <p>The Social Security Administration pays benefits under several different programs. The largest and most important program is the SSDI or Social Security disability program. The other program is the SSI program which in addition to medical requirements has an income and resource component in determining eligibility.</p>
+
+      <div class="faq-item">
+        <button class="faq-question">Who qualifies for Social Security Disability?</button>
+        <div class="faq-answer">
+          <p>To qualify, you must have a medical condition that meets the SSA’s definition of disability and be unable to work for at least 12 months.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How long does the process take?</button>
+        <div class="faq-answer">
+          <p>Initial decisions typically take 3–5 months. Appeals or hearings can take longer depending on case complexity and location.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Do I need an attorney to apply?</button>
+        <div class="faq-answer">
+          <p>You’re not required to have one, but a representative can help prevent errors, ensure forms are correct, and improve approval odds.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder" style="display: none;"></div>
+
+  <script src="js/load-layout.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggles = document.querySelectorAll(".faq-question");
+      toggles.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const answer = btn.nextElementSibling;
+          btn.classList.toggle("open");
+          answer.style.maxHeight = answer.style.maxHeight ? null : answer.scrollHeight + "px";
+        });
+      });
+    });
+  </script>
+</body>
+</html>

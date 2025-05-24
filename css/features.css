@@ -5,6 +5,7 @@
     margin: 0 auto;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 2rem;
   }
 
   .style-icon {
@@ -19,29 +20,19 @@
     color: #333333;
   }
   
-  /* Grid layout */
   .feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
   }
   
-  /* Card styling */
   .feature-card {
     background-color: white;
     padding: 1.2rem;
-    border-left: 2px solid #a00000; /* red accent */
+    border-left: 2px solid #a00000;
     text-align: left;
-    /* border-radius: 0.5rem; */
-    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); */
-    /* transition: box-shadow 0.3s ease; */
   }
   
-  /* .feature-card:hover {
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-  } */
-  
-  /* Icons */
   .feature-icon {
     color: #a00000;
     width: 2.5rem;
@@ -56,7 +47,6 @@
     color: #a00000;
   }
   
-  /* Title */
   .feature-title {
     font-size: 1.2rem;
     font-weight: 700;
@@ -64,10 +54,57 @@
     color: #111;
   }
   
-  /* Description */
   .feature-description {
     font-size: 1.1rem;
     color: #444;
     line-height: 1.6;
   }
+
+
+  @media (max-width: 768px) {
+
+    .features-section {
+      padding: 2rem 1rem;
+    }
+
+    .features-section h2 {
+      font-size: 2rem; 
+      margin-bottom: 2rem; 
+    }
+  
+    .feature-grid {
+      gap: 1.5rem;
+    }
+  
+    .feature-card {
+      padding: 1rem;
+    }
+  
+    .feature-icon {
+      width: 2rem;        
+      height: 2rem;
+      margin-bottom: 1rem;  
+    }
+    .feature-card svg {
+      font-size: 1.5rem;   
+      margin-bottom: 0.75rem;
+    }
+  
+    .feature-title {
+      font-size: 1rem;     
+      margin-bottom: 1rem;  
+    }
+  
+    .feature-description {
+      font-size: 0.9rem;    
+      line-height: 1.4;    
+    }
+  
+    .style-icon img {
+      width: 40px;
+      height: auto;
+      margin-bottom: 0.75rem;
+    }
+  }
+  
   

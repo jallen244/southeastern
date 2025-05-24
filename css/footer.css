@@ -1,47 +1,53 @@
+#footer-placeholder {
+  margin-top: -80px; 
+}
+
 .site-footer {
-    background-color: #0a0f14;
+    background-color: #061018;
     color: #fff;
     padding: 2rem 1rem;
     font-family: "Segoe UI", sans-serif;
   }
+
+  .footer-space {
+    margin: 3rem;
+  }
   
   .site-footer .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem; /* Reduced gap for better spacing */
-    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    max-width: 1400px;
     margin: 0 auto;
     box-sizing: border-box;
   }
   
-  /* Columns */
+  .footer-map {
+    justify-self: center;
+  }
+
   .footer-logo,
   .footer-menu,
   .footer-social {
     flex: 1;
-    min-width: 220px; /* Slightly wider to help prevent wrap issues */
+    min-width: 220px;
   }
   
-  /* Logo */
-  .footer-logo img {
-    max-width: 160px;
-  }
-  
-  /* Headings */
   .footer-menu h3,
   .footer-social h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
   }
   
-  /* Lists */
   .footer-menu ul,
   .footer-social ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
   }
   
   .footer-menu li,
@@ -58,24 +64,216 @@
     color: #fff;
     text-decoration: none;
   }
+
+  .nadr {
+    margin-top:1.5rem;
+  }
   
   .footer-menu a:hover {
     text-decoration: underline;
   }
   
   .contact-icon {
-    height: 1.5rem;
-    width: 1.5rem;
-    flex-shrink: 0;
-    color: white;
+    height: 1.3rem;
+    width: 1.3rem;
   }
   
   
   .footer-bottom {
     text-align: center;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: #aaa;
+    margin-top: 4rem;
+    font-size: 1rem;
+    color: #ffffff;
     width: 100%;
   }
+
+.footer-banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-image: url('../images/banner-four.svg');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+  background-attachment: scroll;
+  overflow: hidden;
+  height: 6rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+
+.banner {
+  position: relative;
+  height: 6rem;
+  width: 100vw;
+}
+
+.banner-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #061018;
+  height: 72%;
+  width: 100vw;
+}
+
+.follow-link {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1.3rem;
+  align-items: center;
+}
+
+.facebook-icon {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.follow-link a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.follow-link a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  .footer-space,
+  .banner-background {
+    display: none;
+  }
+
+  .site-footer {
+    position: relative;
+    z-index: 1;
+    margin-top: -1px;
+    padding: 2rem 1rem;
+  }
+  .site-footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .footer-social { order: 1; }
+  .footer-map    { order: 2; }
+  .footer-menu   { order: 3; }
+
+  .footer-social,
+  .footer-map,
+  .footer-menu {
+    width: 100%;
+    max-width: 350px; 
+    margin: 0 auto;
+    text-align: left; 
+    min-width: 0;  
+  }
+
+  .footer-social h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1rem;
+    margin-bottom: 2rem;
+  }
+  .footer-social li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-map iframe {
+    width: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+    height: auto !important;
+    border: none;
+  }
+
+  .footer-menu h3 {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .footer-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.2rem;
+  }
+  .footer-menu li {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .nadr {
+    margin-top: 4rem;         
+  }
+  .nadr img {
+    max-width: 200px;        
+    width: 200%;              
+    height: auto;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: center;  
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+
+  .footer-banner-img {
+    padding: 0.25rem 0.75rem;
+  }
+
+  .follow-link {
+    gap: 1rem;
+    font-size: 1rem;  
+    font-weight: 500;
+  }
+
+  .facebook-icon {
+    font-size: 1.1rem;
+  }
+
+  .follow-link a {
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   

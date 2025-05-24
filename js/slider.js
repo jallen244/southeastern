@@ -8,13 +8,15 @@
   let isTransitioning = false;
 
   function updateSlider() {
+    const slideWidth = window.innerWidth;
     slidesContainer.style.transition = "transform 0.5s ease-in-out";
-    slidesContainer.style.transform = `translateX(-${current * 100}%)`;
+    slidesContainer.style.transform = `translateX(-${current * slideWidth}px)`;
   }
 
   function jumpTo(index) {
+    const slideWidth = window.innerWidth;
     slidesContainer.style.transition = "none";
-    slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+    slidesContainer.style.transform = `translateX(-${index * slideWidth}px)`;
     current = index;
   }
 
@@ -38,6 +40,8 @@
     if (current === slides.length - 1) jumpTo(1);
     if (current === 0) jumpTo(slides.length - 2);
   });
+
+  window.addEventListener("resize", () => jumpTo(current));
 
   jumpTo(current);
 })();

@@ -1,41 +1,78 @@
+/*parallax option*/
+
+/* .cta-wrapper {
+  position: relative;
+  background-image:
+    linear-gradient(rgba(8, 23, 49, 0.7), rgba(0,0,0,0.7)),
+    url('../images/family-bike.jpg');
+  background-repeat: no-repeat;    
+  background-size: cover;          
+  background-position: center 40%;
+  background-attachment: fixed;    
+  padding: 4rem 2rem;
+  overflow: hidden;
+} */
+
+.cta-wrapper {
+  position: relative;
+  background-image:
+    linear-gradient(rgba(8, 23, 49, 0.7), rgba(0,0,0,0.7)),
+    url('../images/family-bike-2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 40%;
+  background-attachment: scroll;
+  padding: 4rem 2rem;
+  overflow: hidden;
+}
+
+.cta-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;               
+  z-index: 0;           
+}
+
 .cta {
-    position: relative;
-    background-image: url('../images/family-bike.jpg'); /* replace with correct path */
-    background-size: cover;
-    background-position: center 25%;
-    width: 100vw;
-    height: 80vh;
-    color: white;
-    text-align: center;
-    padding: 5rem 2rem;
-    font-family: "Segoe UI", sans-serif;
-    overflow: hidden;
-  }
-  
-  .cta::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(10, 30, 60, 0.7), rgba(10, 30, 60, 0.3)); /* gradient overlay */
-    z-index: 0;
-  }
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  z-index: 1;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.cta h2,
+.cta p,
+.cta-btn {
+  position: relative;
+  z-index: 1;
+}
   
   .cta h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    margin-top: 9rem;
-    margin-bottom: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 1.4rem;
     z-index: 1;
     position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   }
   
   .cta p {
-    font-size: 1.1rem;
-    max-width: 700px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    max-width: 90rem;
     margin: 0 auto 2rem;
     z-index: 1;
     position: relative;
-    line-height: 1.6;
+    line-height: 1.7;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   }
   
   .cta-btn {
@@ -45,15 +82,51 @@
     border-radius: 2rem;
     padding: 1rem 2rem;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     z-index: 1;
     position: relative;
     transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 3rem;
+    margin-bottom: 10rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    text-decoration: none;
   }
   
   .cta-btn:hover {
     background-color: #a00000;
     color: white;
   }
+
+  @media (max-width: 768px) {
+    
+    .cta-wrapper {
+      padding: 3rem 1.5rem;    
+      background-size: cover;      
+      background-repeat: no-repeat;
+      background-position: center; 
+      background-attachment: scroll;
+    }
+  
+    .cta h2 {
+      font-size: 2rem;            
+      margin-top: 2rem;           
+      margin-bottom: 1rem;       
+    }
+  
+    .cta p {
+      font-size: 1rem;             
+      line-height: 1.6;
+      margin-bottom: 1.5rem;       
+      max-width: 100%;             
+    }
+  
+    .cta-btn {
+      font-size: 0.9rem;           
+      padding: 0.75rem 1.5rem;     
+      margin-top: 2rem;            
+      margin-bottom: 7rem;
+    }
+  }
+  
   

@@ -1,25 +1,41 @@
 /* === Index Slider === */
-  .slider {
-    position: relative;
-    width: 100%;
-    height: 750px;
-    overflow: hidden;
+body {
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.slider {
+  position: relative;
+  width: 100vw;
+  height: 725px;
+  overflow: hidden;
+  z-index: 1;
   }
   
   .slides {
     display: flex;
     height: 100%;
-    transform: translateX(-100%);
     will-change: transform;
-    /*transition speed is controlled in slider.js*/
+    gap: 0;
   }
   
   .slide {
-    position: relative;
-    min-width: 100%;
+    width: 100vw;
     flex-shrink: 0;
     height: 100%;
-  }
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: relative; /* ✅ This is essential for absolutely positioned children */
+  }  
+
+  .slides,
+.slide {
+  padding: 0;
+  margin: 0;
+}
   
   .slide img {
     width: 100%;
@@ -27,48 +43,65 @@
     object-fit: cover;
     display: block;
   }
+
   
   /* === Overlay Text on Slide === */
   .slide-caption {
     position: absolute;
-    top: 50%; /* ⬅️ was 50%, move it up a bit */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(255, 255, 255);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    top: 50%;
+    left: 0;
+    right: 0; 
+    transform: translateY(-50%);
+    color: white;
     text-align: center;
-    max-width: 90%;
-    width: fit-content;
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
   .slide-caption h2 {
-    font-size: 65px;
+    font-size: 4rem;
     font-weight: 700;
     margin: 0;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    line-height: 1.2;
+    line-height: 1.2em;
+    /* letter-spacing: .1rem; */
   }
   
   .slide-caption p {
     font-size: 20px;
-    font-weight: 700;
-    margin-top: 1.5rem;
+    font-weight: 500;
+    margin-top: 2rem;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .caption-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 4rem 0; /* vertical only */
+    box-sizing: border-box;
+  }
+
+  .caption-content {
+    max-width: 960px;
+    margin: 0 auto;
   }
   
   
   /* === Slider Arrows === */
   .arrow {
     position: absolute;
-    top: 80%;
+    top: 50%;
     transform: translateY(-50%);
     font-size: 2rem;
     color: white;
-    background-color: rgba(0, 0, 0, 0.4); /* subtle by default */
+    background-color: rgba(0, 0, 0, .4); /*.4*/
     border: none;
     border-radius: 50%;
     width: 57px;
-    height: 57px;
+    height: 57px; /*57*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,7 +116,7 @@
   }
   
   .arrow:hover {
-    background-color: #a00000; /* strong red on hover */
+    background-color: #a00000; 
   }
   
   .arrow.left {
@@ -93,3 +126,64 @@
   .arrow.right {
     right: 1.75rem;
   }
+
+  /* .slider .arrow {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .slider:hover .arrow {
+    opacity: 1;
+    pointer-events: auto;
+  } */
+
+  @media (max-width: 768px) {
+    /* 1. Shrink the overall slider height */
+    .slider {
+      height: 50vh;            /* or use something like 300px */
+      min-height: 300px;
+    }
+  
+    .slide,
+    .slides {
+      height: 100%;
+    }
+  
+    /* 2. Smaller headings within each slide */
+    .slide-caption h2 {
+      font-size: 2rem;         /* down from 4rem */
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+  
+    .slide-caption p {
+      font-size: 1rem;         /* down from 1.25rem (20px) */
+      margin-top: 1rem;
+    }
+  
+    /* 3. Re-position arrows at bottom corners */
+    .arrow {
+      top: auto;               /* turn off centering */
+      bottom: 1rem;            /* 1rem up from bottom of slider */
+      transform: none;         /* cancel the translateY(-50%) */
+    }
+  
+    .arrow.left {
+      left: 1.5rem;            /* same inset from left */
+    }
+    .arrow.right {
+      right: 1.5rem;           /* same inset from right */
+    }
+  
+    /* 4. (Optional) Slightly smaller arrow buttons */
+    .arrow {
+      width: 45px;
+      height: 45px;
+    }
+    .arrow-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  

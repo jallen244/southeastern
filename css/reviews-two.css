@@ -1,0 +1,217 @@
+.reviews-section {
+    position: relative;
+    background-color: #0b1f3a; /* Example solid blue color */
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 4rem;
+    justify-content: center;
+    font-family: "Segoe UI", sans-serif;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    overflow: hidden; /* ensures overlay stays contained */
+}
+  
+  .reviews-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    padding-top: 1.5rem; /* Add top spacing */
+  }
+
+  .quote-mark {
+    font-size: 7rem;
+    font-weight: 600;
+    color: white;
+    position: absolute;
+    top: 15rem;
+    left: -6rem; 
+    /* font-family: Georgia, serif;
+    opacity: 0.15;  */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 1;
+  }
+  
+
+  .reviews-header-testimonials {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .reviews-header {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .reviewer-name {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-style: italic;
+  }
+  
+  .reviews-subheader {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: .7rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .stars-img img{
+    height: 1.5rem;
+    margin-bottom: 2.1rem;
+  }
+
+  .review {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1.25rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .review-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .review-slide,
+  .review-slide-clone {
+    flex: 0 0 100%; /* takes up 100% of wrapper width */
+    max-width: 100%;
+  }
+  
+
+  .review-arrow {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4); /* subtle by default */
+    border: none;
+    border-radius: 50%;
+    width: 57px;
+    height: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 5;
+    transition: background-color 0.3s ease;
+  }
+
+  .reviews-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .review-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: .8rem;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #a00000;
+  }
+
+  @media (max-width: 768px) {
+    /* let the section grow, add more side padding */
+    .reviews-section {
+      height: auto;
+      padding: 2rem 1.5rem;    /* was 2rem 1rem */
+      overflow: visible;
+    }
+  
+    /* hide the decorative quote mark */
+    .quote-mark {
+      display: none;
+    }
+  
+    /* container tweaks */
+    .reviews-container {
+      padding-top: 1rem;
+      padding-bottom: 1.5rem;
+    }
+  
+    /* headings */
+    .reviews-header-testimonials {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .reviews-header {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    /* name & subhead */
+    .reviewer-name {
+      font-size: 1rem;
+    }
+    .reviews-subheader {
+      font-size: 1rem;
+    }
+  
+    /* stars */
+    .stars-img img {
+      height: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    /* body copy a bit smaller */
+    .review {
+      font-size: 1rem;       /* was 1rem */
+      margin-bottom: 1rem;
+    }
+  
+    /* arrows down low */
+    .review-arrow {
+      top: auto;
+      bottom: 1.5rem;
+      transform: none;
+      width: 45px;
+      height: 45px;
+    }
+    .review-arrow.review-left {
+      left: 1rem;
+    }
+    .review-arrow.review-right {
+      right: 1rem;
+    }
+  
+    /* dots stay in view & slightly smaller */
+    .review-dots {
+      margin-top: 1rem;
+      gap: 0.5rem;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+    }
+  }
+  
+  
+  
+  

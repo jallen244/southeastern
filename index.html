@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/slider.css" />
     <link rel="stylesheet" href="css/features.css"/>
-    <link rel="stylesheet" href="css/reviews.css"/>
+    <link rel="stylesheet" href="css/reviews-two.css"/>
     <link rel="stylesheet" href="css/cta.css"/>
     <link rel="stylesheet" href="css/footer.css"/>
 
-    <link rel="icon" type="image/svg+xml" href="images/Mask group (1).svg">
+    <link rel="icon" type="image/svg+xml" href="images/favicon-2.svg">
 
-    <link rel="preload" as="image" href="images/bldg-fall.jpg">
-    <link rel="preload" as="image" href="images/hammer.jpg">
-    <link rel="preload" as="image" href="images/library.jpg">
+    <link rel="preload" as="image" href="images/bldg-sq-sm.jpg">
+    <link rel="preload" as="image" href="images/hammer-sm.jpg">
+    <link rel="preload" as="image" href="images/library-sm.jpg">
 
 </head>
 <body>
@@ -29,60 +29,78 @@
   <div class="slides">
     <!-- Clone of last slide (goes first) -->
     <div class="slide clone">
-      <img src="images/library.jpg" alt="Clone Slide 3">
+      <img src="images/library-sm.jpg" alt="Clone Slide 3">
       <div class="slide-caption">
-        <h2>Disability Hearings</h2>
-        <p>Our experienced team has won thousands of disability hearings throughout the southeast.</p>
+        <div class="caption-bg">
+          <h2>Disability Hearings</h2>
+          <p>Our experienced team has won thousands of disability hearings throughout the southeast.</p>
+        </div>
       </div>
     </div>
 
     <!-- Real Slide 1 -->
     <div class="slide">
-      <img src="images/bldg-fall.jpg" alt="Slide 1">
+      <img class="bldg" src="images/bldg-sq-sm.jpg" alt="Slide 1">
       <div class="slide-caption">
-        <h2>We help you navigate the SSD claims process</h2>
-        <p>Get The Benefits You've Earned</p>
+        <div class="caption-bg">
+          <h2>We help you navigate the SSD<br>claims process</h2>
+          <p>Get The Benefits You've Earned</p>
+        </div>
       </div>
     </div>
 
     <!-- Real Slide 2 -->
     <div class="slide">
-      <img src="images/hammer.jpg" alt="Slide 2">
+      <img src="images/hammer-sm.jpg" alt="Slide 2">
       <div class="slide-caption">
-        <h2>Has your case been denied?</h2>
-        <p>Let us file your appeal and move your case forward.</p>
+        <div class="caption-bg">
+          <h2>Has your case been denied?</h2>
+          <p>Let us file your appeal and move your case forward.</p>
+        </div>
       </div>
     </div>
 
     <!-- Real Slide 3 -->
     <div class="slide">
-      <img src="images/library.jpg" alt="Slide 3">
+      <img src="images/library-sm.jpg" alt="Slide 3">
       <div class="slide-caption">
-        <h2>Disability Hearings</h2>
-        <p>Our experienced team has won thousands of disability hearings throughout the southeast.</p>
+        <div class="caption-bg">
+          <div class="caption-content">
+            <h2>Disability Hearings</h2>
+            <p>Our experienced team has won thousands of disability hearings throughout the southeast.</p>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- Clone of first slide (goes last) -->
     <div class="slide clone">
-      <img src="images/bldg-fall.jpg" alt="Clone Slide 1">
+      <img class="bldg" src="images/bldg-sq-sm.jpg" alt="Clone Slide 1">
       <div class="slide-caption">
-        <h2>We help you navigate the SSD claims process</h2>
-        <p>Get The Benefits You've Earned</p>
+        <div class="caption-bg">
+          <div class="caption-content">
+            <h2>We help you navigate the SSD<br>claims process</h2>
+            <p>Get The Benefits You've Earned</p>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <button class="arrow left" aria-label="Previous slide"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="arrow-icon">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-  </svg>
-  
+  <!-- Arrows are now inside .slider -->
+  <button class="arrow left" aria-label="Previous slide">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="arrow-icon">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+    </svg>
   </button>
-  <button class="arrow right" aria-label="Next slide"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="arrow-icon">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-  </svg>
+
+  <button class="arrow right" aria-label="Next slide">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="arrow-icon">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+    </svg>
   </button>
-</div>
+</section>
+
 
 
 <!-- Features Section -->
@@ -153,48 +171,49 @@
     <img class="style-icon" src="images/style-icon-white.svg">
     <h2 class="reviews-header-testimonials">Testimonials</h2>
     <h3 class="reviews-header">What our clients are saying...</h3>
-
+    <div class="quote-mark">“</div>
     <div class="reviews-wrapper">
+      
       <div class="review-slides">
 
         <!-- Testimonials Third Slide Clone-->
         <div class="review-slide-clone">
-          <p class="reviewer-name">L.p.David Zuno</p>
-          <!-- <div class="stars-img"><img src="images/stars.png"></div> -->
           <p class="reviews-subheader">Google Review</p>
+          <div class="stars-img"><img src="images/stars-white.svg"></div>
           <p class="review">The folks over at Southeastern Disability are " Top Notch " .. They are amiable, amicable, and very professional!! My S.S.A. claim was initially a difficult situation to say the least.. Mr. James Allen, and staff handled my case in stride, and reassured me from start to approval. It is my distinct pleasure to recommend them to you, and your family! Thank You Kindly Southeastern Disability.., Gratefully, David Brian Zuno</p>
+          <p class="reviewer-name">- L.p.David Zuno</p>
         </div>
 
           <!-- Testimonials First Slide -->
           <div class="review-slide">
-            <p class="reviewer-name">Linda Pearson</p>
-            <!-- <div class="stars-img"><img src="images/stars.png"></div> -->
             <p class="reviews-subheader">Google Review</p>
+            <div class="stars-img"><img src="images/stars-white.svg"></div>
             <p class="review">We are extremely pleased with the services provided by Jim and the staff at Southeastern Disability. Their commitment to our case, their concern for our rights, and their professional attention to every detail throughout the whole process was reassuring. We are grateful for Jim, Maria and those who worked tirelessly to bring our case to a favorable ruling.</p>
+            <p class="reviewer-name">- Linda Pearson</p>
           </div>
 
           <!-- Testimonials Second Slide -->
           <div class="review-slide">
-            <p class="reviewer-name">Amy Dixon</p>
-            <!-- <div class="stars-img"><img src="images/stars.png"></div> -->
             <p class="reviews-subheader">Google Review</p>
+            <div class="stars-img"><img src="images/stars-white.svg"></div>
             <p class="review">I highly recommend James Allen and his staff at Southeastern Disability to anyone in need of assistance with their disability claim. My husband’s entire claim process from beginning to end was handled with their extensive knowledge and professionalism. They exceeded our expectations and so thankful we made the call.</p>
+            <p class="reviewer-name">- Amy Dixon</p>
           </div>
 
           <!-- Testimonials Third Slide -->
           <div class="review-slide">
-            <p class="reviewer-name">L.p.David Zuno</p>
-            <!-- <div class="stars-img"><img src="images/stars.png"></div> -->
             <p class="reviews-subheader">Google Review</p>
+            <div class="stars-img"><img src="images/stars-white.svg"></div>
             <p class="review">The folks over at Southeastern Disability are " Top Notch " .. They are amiable, amicable, and very professional!! My S.S.A. claim was initially a difficult situation to say the least.. Mr. James Allen, and staff handled my case in stride, and reassured me from start to approval. It is my distinct pleasure to recommend them to you, and your family! Thank You Kindly Southeastern Disability.., Gratefully, David Brian Zuno</p>
+            <p class="reviewer-name">- L.p.David Zuno</p>
           </div>
 
           <!-- Testimonials First Slide Clone-->
           <div class="review-slide-clone">
-            <p class="reviewer-name">Linda Pearson</p>
-            <!-- <div class="stars-img"><img src="images/stars.png"></div> -->
             <p class="reviews-subheader">Google Review</p>
+            <div class="stars-img"><img src="images/stars-white.svg"></div>
             <p class="review">We are extremely pleased with the services provided by Jim and the staff at Southeastern Disability. Their commitment to our case, their concern for our rights, and their professional attention to every detail throughout the whole process was reassuring. We are grateful for Jim, Maria and those who worked tirelessly to bring our case to a favorable ruling.</p>
+            <p class="reviewer-name">- Linda Pearson</p>
           </div>
 
       </div>
@@ -210,17 +229,18 @@
 </section> 
 
 <!-- CTA -->
-<section class="cta">
-  <h2 class="cta-header">No matter where you are in the process, we can help...</h2>
-  <p>Our experienced team has over 35 years combined experience in all types of SSD cases.<br>
-    Serving Waycross, Valdosta, Douglas, Alma, Folkston and Surrounding Areas</p>
-  <button class="cta-btn">Book a Free Consultation</button>
-</section>
+<div class="cta-wrapper">
+  <section class="cta">
+    <h2 class="cta-header">No matter where you are in the process, we can help...</h2>
+    <p>Our experienced team has over 35 years combined experience in all types of SSD cases.<br>
+      Serving Waycross, Valdosta, Douglas, Alma, Folkston and Surrounding Areas</p>
+    <a href="tel:9128009371" class="cta-btn">Call Now (912) 800-9371</a>
+  </section>
+</div>
 
-<!-- Load Footer-->
-<div id="footer-placeholder"></div>
 
-
+  <!-- Load Footer-->
+  <div id="footer-placeholder"></div>
 
     <!-- javascript -->
     <script src="js/load-layout.js" defer></script>

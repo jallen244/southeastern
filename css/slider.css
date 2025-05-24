@@ -28,7 +28,7 @@ body {
     height: 100%;
     overflow: hidden;
     backface-visibility: hidden;
-    position: relative; /* ✅ This is essential for absolutely positioned children */
+    position: relative;
   }  
 
   .slides,
@@ -67,7 +67,6 @@ body {
     margin: 0;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     line-height: 1.2em;
-    /* letter-spacing: .1rem; */
   }
   
   .slide-caption p {
@@ -80,7 +79,7 @@ body {
   .caption-bg {
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
-    padding: 4rem 0; /* vertical only */
+    padding: 4rem 0;
     box-sizing: border-box;
   }
 
@@ -97,11 +96,11 @@ body {
     transform: translateY(-50%);
     font-size: 2rem;
     color: white;
-    background-color: rgba(0, 0, 0, .4); /*.4*/
+    background-color: rgba(0, 0, 0, .4);
     border: none;
     border-radius: 50%;
     width: 57px;
-    height: 57px; /*57*/
+    height: 57px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,21 +126,10 @@ body {
     right: 1.75rem;
   }
 
-  /* .slider .arrow {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
-  
-  .slider:hover .arrow {
-    opacity: 1;
-    pointer-events: auto;
-  } */
-
   @media (max-width: 768px) {
-    /* 1. Shrink the overall slider height */
+
     .slider {
-      height: 50vh;            /* or use something like 300px */
+      height: 50vh;   
       min-height: 300px;
     }
   
@@ -150,37 +138,36 @@ body {
       height: 100%;
     }
   
-    /* 2. Smaller headings within each slide */
     .slide-caption h2 {
-      font-size: 2rem;         /* down from 4rem */
+      font-size: 2rem; 
       line-height: 1.2;
       margin-bottom: 0.5rem;
     }
   
     .slide-caption p {
-      font-size: 1rem;         /* down from 1.25rem (20px) */
+      font-size: 1rem; 
       margin-top: 1rem;
     }
   
-    /* 3. Re-position arrows at bottom corners */
     .arrow {
-      top: auto;               /* turn off centering */
-      bottom: 1rem;            /* 1rem up from bottom of slider */
-      transform: none;         /* cancel the translateY(-50%) */
+      top: auto;  
+      bottom: 1rem;
+      transform: none; 
     }
   
     .arrow.left {
-      left: 1.5rem;            /* same inset from left */
+      left: 1.5rem; 
     }
+
     .arrow.right {
-      right: 1.5rem;           /* same inset from right */
+      right: 1.5rem;  
     }
-  
-    /* 4. (Optional) Slightly smaller arrow buttons */
+
     .arrow {
       width: 45px;
       height: 45px;
     }
+
     .arrow-icon {
       width: 16px;
       height: 16px;
